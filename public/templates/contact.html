@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="contactForm">
+        <h1> Contact </h1>
+        <h2>Enter your Contact Details</h2>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+        <input type="text" name="city" id="city" placeholder="City" required>
+        <input type="text" name="emergencyName" id="emergencyName" placeholder="Emergency Contact Name" required>
+        <input type="tel" name="emergencyPhone" id="emergencyPhone" placeholder="Emergency Contact Phone" required>
+        <button type="button" id="submitButton">Submit</button>
+    </form>
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function () {
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const city = document.getElementById('city').value.trim();
+            const emergencyName = document.getElementById('emergencyName').value.trim();
+            const emergencyPhone = document.getElementById('emergencyPhone').value.trim();
+
+            const aboutData = JSON.parse(sessionStorage.getItem('aboutData'));
+            const educationData = JSON.parse(sessionStorage.getItem('educationData'));
+            const experienceData = JSON.parse(sessionStorage.getItem('experienceData'));
+            const profileLinks = JSON.parse(sessionStorage.getItem('profileLinks'));
+
+            const formData = new FormData();
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('city', city);
+            formData.append('emergencyName', emergencyName);
+            formData.append('emergencyPhone', emergencyPhone);
+            formData.append('aboutData', JSON.stringify(aboutData));
+            formData.append('educationData', JSON.stringify(educationData));
+            formData.append('experienceData', JSON.stringify(experienceData));
+            formData.append('profileLinks', JSON.stringify(profileLinks));
+
+            fetch('submit.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.body.innerHTML = data; // Display the response from submit.php
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

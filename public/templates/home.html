@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Hackathon</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#prizes">Prizes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Hero Section -->
+<section id="home" class="hero-section" style=" background-image: url('data:image/jpeg;base64,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'); background-size:contain; background-position:center;">
+    <div class="hero-content">
+          <h1>Welcome to Hackathon 2024</h1>
+          <p>Where Innovation Meets Opportunity</p>
+          <a href="#register" class="cta">Register Now</a>
+      </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <h2>About the Event</h2>
+    <!-- Left and right navigation buttons 
+    <button class="slider-button left" id="prevBtn">&#8249;</button>
+    <button class="slider-button right" id="nextBtn">&#8250;</button>
+-->
+    <div class="container">
+        <div class="Images-wrap">
+
+        <div class="photo photo-1"></div>
+        <div class="photo photo-2"></div>
+        <div class="photo photo-3"></div>
+        <div class="photo photo-4"></div>
+        <div class="photo photo-5"></div>
+    </div>
+    </div>
+</section>
+
+<!-- About Section
+ Collaborate with brilliant minds and industry leaders.
+ Build projects that solve real-world problems.
+ Learn from hands-on workshops and expert mentorship.
+ Showcase your talent and win amazing prizes!
+ https://media.istockphoto.com/id/1210803911/vector/people-working-together-hackathon-vector-flat-illustration-programmers-work-with-data.jpg?s=2048x2048&w=is&k=20&c=XY-5Ak1Cdqd0t2ola9M8zd0QfHIxgU2jHP1cCYwgdbg=
+https://media.istockphoto.com/id/1389259813/vector/business-presentation-illustration.jpg?s=612x612&w=0&k=20&c=gS7AqQk1q44G3DEK9VRoVs2ak93fpVw7I7r6Sg6hf3A=
+ collaboration https://media.istockphoto.com/id/1452522238/vector/collaboration-business-development-of-team-concept-symbol-of-teamwork-cooperation-partnership.jpg?s=612x612&w=0&k=20&c=e4VcfLCTmgrKF35lVrMFDJl3rM0jP4b7y6mgKOiOmRM=
+  discussing ideas  https://media.istockphoto.com/id/2171127484/vector/discussing-project-planning-vector-illustration-which-can-easily-modify-or-edit-which-can.jpg?s=612x612&w=0&k=20&c=5_ieAkIhDmmb5pJY25L8Dts7efFyOFRNufLWFhOsO1s=  
+acheivwment https://media.istockphoto.com/id/1488532905/vector/achievement-team-infographics-design-template-stock-illustration-icons-presentation-vector.jpg?s=612x612&w=0&k=20&c=ZxXbQHw-tgbcQvFNQpA9bFRTfCgJwK1Bl__QtPp8jKM=
+
+</section> -->
+
+<!-- Schedule Section -->
+<section id="schedule" class="schedule-section">
+    <h2>Event Schedule</h2>
+    <p>Discover the journey of the Hackathon from start to finish. Here's a detailed schedule for each day, so you know what to expect.</p>
+
+    <div class="bee-timeline">
+        <!-- Day 1 -->
+        <div class="day">
+            <h3>Day 1: Inauguration & Keynote</h3>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>09:00 AM - Registration & Welcome</h4>
+                    <p>Participants check in, collect welcome kits, and network with fellow hackers.</p>
+                </div>
+            </div>
+            <div class="bee-movement right">
+                <div class="bee-timing">
+                    <h4>10:00 AM - Opening Ceremony</h4>
+                    <p>Kick-off the Hackathon with inspiring speeches from industry leaders and sponsors.</p>
+                </div>
+            </div>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>11:00 AM - Keynote Address</h4>
+                    <p>Keynote speech by a prominent guest speaker sharing insights on innovation and creativity.</p>
+                </div>
+            </div>
+            <div class="bee-movement right">
+                <div class="bee-timing">
+                    <h4>12:00 PM - Networking & Team Formation</h4>
+                    <p>Meet other participants, discuss ideas, and form teams for the Hackathon challenge.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day">
+            <h3>Day 2: Workshops & Development</h3>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>09:00 AM - Technical Workshop</h4>
+                    <p>Hands-on session on cutting-edge technologies and development tools.</p>
+                </div>
+            </div>
+            <div class="bee-movement right">
+                <div class="bee-timing">
+                    <h4>12:00 PM - Lunch Break</h4>
+                    <p>Take a break and enjoy some delicious food with fellow participants.</p>
+                </div>
+            </div>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>01:00 PM - Coding Begins</h4>
+                    <p>Teams start working on their projects and receive guidance from mentors.</p>
+                </div>
+            </div>
+            <div class="bee-movement right">
+                <div class="bee-timing">
+                    <h4>04:00 PM - Feedback Session</h4>
+                    <p>Participants receive feedback from mentors on their progress.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day">
+            <h3>Day 3: Hackathon & Midnight Coding</h3>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>09:00 AM - Project Refinement</h4>
+                    <p>Participants continue to refine and develop their projects with mentor guidance.</p>
+                </div>
+            </div>
+            <div class="bee-movement right">
+                <div class="bee-timing">
+                    <h4>01:00 PM - Lunch Break</h4>
+                    <p>Refuel yourself and prepare for the crucial final coding stretch.</p>
+                </div>
+            </div>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>03:00 PM - Hackathon Continues</h4>
+                    <p>Teams work through the night to bring their ideas to life.</p>
+                </div>
+            </div>
+            <div class="bee-movement right">
+                <div class="bee-timing">
+                    <h4>10:00 PM - Midnight Motivation</h4>
+                    <p>Late-night motivational session to keep spirits high during the overnight coding marathon.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day">
+            <h3>Day 4: Project Submission & Closing</h3>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>07:00 AM - Final Submission</h4>
+                    <p>Teams submit their final project builds for review by the judges.</p>
+                </div>
+            </div>
+            <div class="bee-movement right">
+                <div class="bee-timing">
+                    <h4>09:00 AM - Project Demos</h4>
+                    <p>Teams present their projects to judges, receive feedback, and share their journey.</p>
+                </div>
+            </div>
+            <div class="bee-movement left">
+                <div class="bee-timing">
+                    <h4>12:00 PM - Closing Ceremony</h4>
+                    <p>Award announcements, special mentions, and the closing of the Hackathon.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Registration Form -->
+    <section id="register">
+        <h2>Register for the Hackathon</h2> <div class="event-container">
+            <!-- Left Section: Content -->
+            <class="content-section">
+             <h2>HackForChange: Building a Better Tomorrow, One Website at a Time</h2>
+                <p>
+                    This year, HackForChange continues to push the boundaries of what a hackathon can be. Beyond the adrenaline of coding sprints, the thrill of competition, and the pursuit of recognition, it’s about something far more profound...
+                </p>
+                <p>
+                    At HackForChange, you’re stepping into a community that believes in the power of open innovation — not for the sake of winning, but for the love of impactful creation. From developing platforms for education access to building tools that support mental health, every website you create has the potential to change lives for the better.
+                </p>
+                <p class="date"><strong>Runs From:</strong><br>Dec 1 - 31, 2024</p>
+                <h3>Venue: <a href="#">EPCET Campus , Bengaluru, India</a></h3> 
+                </class>
+                </div>
+                <div class="status">
+                    <p class="closed">Applications Open</p>
+                    <p class="ended"><strong>Hackathon is Open and Thriving</strong></p>
+                </div>
+
+            </div>
+       <br>
+        <form id="registrationForm" action="about.html" method="post">
+          
+            <button type="submit" class="register-btn">Register Now</button>
+        </form>
+    </section>
+
+      <!-- Prizes Section -->
+    <section id="prizes" class="prizes-section">
+      <h2>Prizes</h2>
+      <div class="podium-container">
+          <div class="podium podium-second">
+              <img src="data:image/jpeg;base64,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" alt="Silver Cup" class="prize-cup">
+              <h3>2nd Place</h3>
+              <p>$2,000 Cash Prize</p>
+          </div>
+          <div class="podium podium-first">
+              <img src="data:image/jpeg;base64,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" alt="Gold Cup" class="prize-cup">
+              <h3>1st Place</h3>
+              <p>$5,000 Cash Prize</p>
+          </div>
+          <div class="podium podium-third">
+              <img src="data:image/jpeg;base64,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" alt="Bronze Cup" class="prize-cup">
+              <h3>3rd Place</h3>
+              <p>$1,000 Cash Prize</p>
+
+          </div>
+      </div>
+  </section>
+
+
+<section class="contact">
+    <div class="content">
+        <h1>Contact Us</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Exercitationem numquam id reprehenderit, sunt laudantium enim possimus repellat debitis et quis!</p>
+    </div>
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><ion-icon name="location-outline"></ion-icon></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>402671 Sugar Camp Road,<br>Owatonna,Minnesota,<br>55025060</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><ion-icon name="call-outline"></ion-icon></div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>000-000-0000</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><ion-icon name="mail-outline"></ion-icon></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>wrub7d78i0e@temporary-mail</p>
+                </div>
+            </div>
+            <!-- <h2 class="txt">Connect with us</h2>
+            <ul class="sci">
+                <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul> -->
+            
+        </div>
+
+        <div class="contactForm">
+            <form>
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Full Name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="" required="required">
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required"></textarea>
+                    <span>Type your Message...</span>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+                
+<footer>
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fab fa-slack"></i>
+          <span class="logo_name">Hackathon </span>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Get started</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Services</li>
+          <li><a href="#">HAckathons</a></li>
+          <li><a href="#">Website Designs</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Workshops</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">My account</a></li>
+          <li><a href="#">Prefrences</a></li>
+          <li><a href="#">Purchase</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Community</li>
+          <li><a href="#">Organise a Hackathon</a></li>
+          <li><a href="#">Explore Hackathons</a></li>
+          <li><a href="#"></a>Code of Conduct</li
+          <li><a href="#"></a>Documentation</li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input type="text" placeholder="Enter your email"></li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2024 <a href="#">CodingStella </a>All rights reserved</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+    
+
+    <script src="script.js"></script> <!-- Adjust path as needed -->
+</body>
+</html>

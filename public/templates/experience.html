@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="experienceForm">
+        <h1> Experience </h1>
+        <h2>Enter your Roles and Skills   </h2>
+        <input type="text" id="roles" name="roles" placeholder="Roles" required>
+        <input type="text" id="skills" name="skills" placeholder="Skills (comma separated)" required>
+        <button type="button" id="nextButton">Next</button>
+    </form>
+
+    <script>
+        document.getElementById('nextButton').addEventListener('click', function () {
+            const formData = new FormData(document.getElementById('experienceForm'));
+            sessionStorage.setItem('experienceData', JSON.stringify(Object.fromEntries(formData)));
+            window.location.href = 'links.html';
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="educationForm">
+        <h1> Education </h1>
+        <h2>Enter your Current Qualification details </h2>
+        <input type="text" id="degreeType" name="degreeType" placeholder="Degree Type" required>
+        <input type="text" id="institution" name="institution" placeholder="Institution name" required>
+        <input type="text" id="fieldOfStudy" name="fieldOfStudy" placeholder="Field of Study" required>
+        <input type="text" id="graduationYear" name="graduationYear" placeholder="Expected Year of Graduation" required>
+        <button type="button" id="nextButton">Next</button>
+    </form>
+
+    <script>
+        document.getElementById('nextButton').addEventListener('click', function () {
+            const formData = new FormData(document.getElementById('educationForm'));
+            sessionStorage.setItem('educationData', JSON.stringify(Object.fromEntries(formData)));
+            window.location.href = 'experience.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links for Online Profiles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Links for Online Profiles</h1>
+        <form id="linksForm">
+            <div id="linksContainer">
+                <label for="profile1">Profile Link 1</label>
+                <input type="url" id="profile1" name="profiles[]" class="profileLink" placeholder="Enter profile URL" required>
+            </div>
+            <p id="errorMessage" style="color: red; display: none;">Please ensure all profile links are filled.</p>
+            <button type="button" id="addProfile">Add New Profile</button>
+            <button type="button" id="nextButton">Next</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('addProfile').addEventListener('click', function () {
+            const linksContainer = document.getElementById('linksContainer');
+            const profileCount = linksContainer.querySelectorAll('.profileLink').length + 1;
+
+            const newProfileDiv = document.createElement('div');
+            newProfileDiv.innerHTML = `
+                <label for="profile${profileCount}">Profile Link ${profileCount}</label>
+                <input type="url" id="profile${profileCount}" name="profiles[]" class="profileLink" placeholder="Enter profile URL" required>
+            `;
+            linksContainer.appendChild(newProfileDiv);
+        });
+
+        document.getElementById('nextButton').addEventListener('click', function () {
+            const profileLinks = document.querySelectorAll('.profileLink');
+            let allLinksValid = true;
+            const linksArray = [];
+
+            profileLinks.forEach(link => {
+                if (!link.value.trim()) {
+                    allLinksValid = false;
+                } else {
+                    linksArray.push(link.value.trim());
+                }
+            });
+
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (!allLinksValid) {
+                errorMessage.style.display = 'block';
+            } else {
+                errorMessage.style.display = 'none';
+
+                sessionStorage.setItem('profileLinks', JSON.stringify(linksArray));
+                window.location.href = 'contact.html';
+            }
+        });
+    </script>
+</body>
+</html>
